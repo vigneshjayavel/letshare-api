@@ -9,15 +9,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140920092805) do
+ActiveRecord::Schema.define(:version => 20140920125358) do
 
   create_table "bookings", :force => true do |t|
-    t.float    "from"
-    t.float    "to"
+    t.decimal  "from",            :precision => 8, :scale => 2
+    t.decimal  "to",              :precision => 8, :scale => 2
     t.integer  "seats_remaining"
     t.datetime "pickup_datetime"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "vehicle_type"
   end
 
   create_table "user_bookings", :force => true do |t|
