@@ -2,14 +2,14 @@ class BookingsController < ApplicationController
 	def new
 	end
 
-	CAR_SEATS_MAPPING = {1=>4,2=>5,3=>>7}
+	CAR_SEATS_MAPPING = {1=>4,2=>5,3=>7}
 	def create 
 		user=User.find params.delete(:id)
 		no_ppl=params.delete(:no_ppl)
 		booking_val=JSON.parse(params[:bookings])
 		booking_val[:pickup_datetime.to_s]=booking_val[:pickup_datetime.to_s].to_time
 		# params[:bookings][:seats_remaining]=params[:bookings][:seats_remaining]
-		booking_val[:seats_remaining] = CAR_SEATS_MAPPING[booking_val[:vehicle_type]] - no_ppl
+		booking_val[:seats_remaining] = CAR_SEATS_MAPPING[booking_val[:vehicle_type.to_s]] - no_ppl.to_i
 		new_booking = user.bookings.build booking_val
 		new_booking.save!
 		user_booking = user.user_bookings.build
@@ -47,14 +47,14 @@ class BookingsController < ApplicationController
 
 	def join_ride
 		user = User.find(params[:id])
-		no_ppl = params(:no_ppl)
-		booking_val = JSON.parse(params[:booking])
-		booking_id  = booking_val[:id]
+		no_ppl = params[:no_ppl]
+		booking_val = JSON.parse(params[:bookings])
+		booking_id  = booking_val[:id.to_s]
 		current_booking=Booking.find(booking_id)
 		seats_remaining_in_this_ride = current_booking.seats_remaining
 		no_ppl = params[:no_ppl]
-		updated_seats = seats_remaining_in_this_ride - no_ppl
-		current_booking.update(:seats_remaining => updated_seats)
+		updated_seats = seats_remaining_in_this_ride - no_ppl.to_i
+		current_booking.update_attributes(:seats_remaining => updated_seats)
 
 		process_result "yes updated"
 

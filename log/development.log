@@ -1601,3 +1601,360 @@ Processing BookingsController#search (for 127.0.0.1 at 2014-09-20 20:24:35) [POS
   [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
   [4;35;1mBooking Load (0.6ms)[0m   [0mSELECT `bookings`.* FROM `bookings` INNER JOIN `user_bookings` ON (`bookings`.`id` = `user_bookings`.`booking_id`) INNER JOIN `users` ON (`users`.`id` = `user_bookings`.`user_id`) WHERE (bookings.from = 1.2 AND bookings.to = 1.2 AND (pickup_datetime BETWEEN '2014-09-20 12:41:46' AND '2014-09-20 12:56:46') AND vehicle_type =2 AND users.gender = 'male') ORDER BY pickup_datetime[0m
 Completed in 649ms (View: 0, DB: 1) | 200 OK [http://localhost/bookings/search]
+
+
+Processing ApplicationController#search (for 127.0.0.1 at 2014-09-20 21:28:15) [POST]
+  Parameters: {"id"=>"1", "bookings"=>"{\"from\":1.2,\"to\":1.2,\"pickup_datetime\":\"2014-09-20 12:56:46\",\"seats_remaining\":5,\"vehicle_type\":2}", "no_ppl"=>"4"}
+
+SyntaxError (/Users/srinivasan/letshare/letshare/app/controllers/bookings_controller.rb:5: syntax error, unexpected '>'
+	CAR_SEATS_MAPPING = {1=>4,2=>5,3=>>7}
+	                                   ^):
+  <internal:prelude>:10:in `synchronize'
+
+Rendered rescues/_trace (37.4ms)
+Rendered rescues/_request_and_response (1.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BookingsController#search (for 127.0.0.1 at 2014-09-20 21:28:45) [POST]
+  Parameters: {"id"=>"1", "bookings"=>"{\"from\":1.2,\"to\":1.2,\"pickup_datetime\":\"2014-09-20 12:56:46\",\"seats_remaining\":5,\"vehicle_type\":2}", "no_ppl"=>"4"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mBooking Load (0.5ms)[0m   [0mSELECT `bookings`.* FROM `bookings` INNER JOIN `user_bookings` ON (`bookings`.`id` = `user_bookings`.`booking_id`) INNER JOIN `users` ON (`users`.`id` = `user_bookings`.`user_id`) WHERE (bookings.from = 1.2 AND bookings.to = 1.2 AND (pickup_datetime BETWEEN '2014-09-20 12:41:46' AND '2014-09-20 12:56:46') AND vehicle_type =2 AND users.gender = 'male' AND seats_remaining >= '4') ORDER BY pickup_datetime[0m
+Completed in 74ms (View: 0, DB: 1) | 200 OK [http://localhost/bookings/search]
+
+
+Processing BookingsController#search (for 127.0.0.1 at 2014-09-20 21:29:03) [POST]
+  Parameters: {"id"=>"1", "bookings"=>"{\"from\":1.2,\"to\":1.2,\"pickup_datetime\":\"2014-09-20 12:56:46\",\"seats_remaining\":5,\"vehicle_type\":2}", "no_ppl"=>"4"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mBooking Load (0.5ms)[0m   [0mSELECT `bookings`.* FROM `bookings` INNER JOIN `user_bookings` ON (`bookings`.`id` = `user_bookings`.`booking_id`) INNER JOIN `users` ON (`users`.`id` = `user_bookings`.`user_id`) WHERE (bookings.from = 1.2 AND bookings.to = 1.2 AND (pickup_datetime BETWEEN '2014-09-20 12:41:46' AND '2014-09-20 12:56:46') AND vehicle_type =2 AND users.gender = 'male' AND seats_remaining >= '4') ORDER BY pickup_datetime[0m
+Completed in 58ms (View: 0, DB: 1) | 200 OK [http://localhost/bookings/search]
+
+
+Processing BookingsController#search (for 127.0.0.1 at 2014-09-20 21:29:04) [POST]
+  Parameters: {"id"=>"1", "bookings"=>"{\"from\":1.2,\"to\":1.2,\"pickup_datetime\":\"2014-09-20 12:56:46\",\"seats_remaining\":5,\"vehicle_type\":2}", "no_ppl"=>"4"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mBooking Load (0.5ms)[0m   [0mSELECT `bookings`.* FROM `bookings` INNER JOIN `user_bookings` ON (`bookings`.`id` = `user_bookings`.`booking_id`) INNER JOIN `users` ON (`users`.`id` = `user_bookings`.`user_id`) WHERE (bookings.from = 1.2 AND bookings.to = 1.2 AND (pickup_datetime BETWEEN '2014-09-20 12:41:46' AND '2014-09-20 12:56:46') AND vehicle_type =2 AND users.gender = 'male' AND seats_remaining >= '4') ORDER BY pickup_datetime[0m
+Completed in 75ms (View: 0, DB: 1) | 200 OK [http://localhost/bookings/search]
+
+
+Processing BookingsController#search (for 127.0.0.1 at 2014-09-20 21:29:04) [POST]
+  Parameters: {"id"=>"1", "bookings"=>"{\"from\":1.2,\"to\":1.2,\"pickup_datetime\":\"2014-09-20 12:56:46\",\"seats_remaining\":5,\"vehicle_type\":2}", "no_ppl"=>"4"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mBooking Load (0.6ms)[0m   [0mSELECT `bookings`.* FROM `bookings` INNER JOIN `user_bookings` ON (`bookings`.`id` = `user_bookings`.`booking_id`) INNER JOIN `users` ON (`users`.`id` = `user_bookings`.`user_id`) WHERE (bookings.from = 1.2 AND bookings.to = 1.2 AND (pickup_datetime BETWEEN '2014-09-20 12:41:46' AND '2014-09-20 12:56:46') AND vehicle_type =2 AND users.gender = 'male' AND seats_remaining >= '4') ORDER BY pickup_datetime[0m
+Completed in 68ms (View: 1, DB: 1) | 200 OK [http://localhost/bookings/search]
+
+
+Processing BookingsController#search (for 127.0.0.1 at 2014-09-20 21:29:04) [POST]
+  Parameters: {"id"=>"1", "bookings"=>"{\"from\":1.2,\"to\":1.2,\"pickup_datetime\":\"2014-09-20 12:56:46\",\"seats_remaining\":5,\"vehicle_type\":2}", "no_ppl"=>"4"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mBooking Load (0.8ms)[0m   [0mSELECT `bookings`.* FROM `bookings` INNER JOIN `user_bookings` ON (`bookings`.`id` = `user_bookings`.`booking_id`) INNER JOIN `users` ON (`users`.`id` = `user_bookings`.`user_id`) WHERE (bookings.from = 1.2 AND bookings.to = 1.2 AND (pickup_datetime BETWEEN '2014-09-20 12:41:46' AND '2014-09-20 12:56:46') AND vehicle_type =2 AND users.gender = 'male' AND seats_remaining >= '4') ORDER BY pickup_datetime[0m
+Completed in 34ms (View: 1, DB: 1) | 200 OK [http://localhost/bookings/search]
+
+
+Processing BookingsController#search (for 127.0.0.1 at 2014-09-20 21:29:04) [POST]
+  Parameters: {"id"=>"1", "bookings"=>"{\"from\":1.2,\"to\":1.2,\"pickup_datetime\":\"2014-09-20 12:56:46\",\"seats_remaining\":5,\"vehicle_type\":2}", "no_ppl"=>"4"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mBooking Load (0.8ms)[0m   [0mSELECT `bookings`.* FROM `bookings` INNER JOIN `user_bookings` ON (`bookings`.`id` = `user_bookings`.`booking_id`) INNER JOIN `users` ON (`users`.`id` = `user_bookings`.`user_id`) WHERE (bookings.from = 1.2 AND bookings.to = 1.2 AND (pickup_datetime BETWEEN '2014-09-20 12:41:46' AND '2014-09-20 12:56:46') AND vehicle_type =2 AND users.gender = 'male' AND seats_remaining >= '4') ORDER BY pickup_datetime[0m
+Completed in 32ms (View: 1, DB: 1) | 200 OK [http://localhost/bookings/search]
+
+
+Processing BookingsController#search (for 127.0.0.1 at 2014-09-20 21:29:05) [POST]
+  Parameters: {"id"=>"1", "bookings"=>"{\"from\":1.2,\"to\":1.2,\"pickup_datetime\":\"2014-09-20 12:56:46\",\"seats_remaining\":5,\"vehicle_type\":2}", "no_ppl"=>"4"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mBooking Load (0.5ms)[0m   [0mSELECT `bookings`.* FROM `bookings` INNER JOIN `user_bookings` ON (`bookings`.`id` = `user_bookings`.`booking_id`) INNER JOIN `users` ON (`users`.`id` = `user_bookings`.`user_id`) WHERE (bookings.from = 1.2 AND bookings.to = 1.2 AND (pickup_datetime BETWEEN '2014-09-20 12:41:46' AND '2014-09-20 12:56:46') AND vehicle_type =2 AND users.gender = 'male' AND seats_remaining >= '4') ORDER BY pickup_datetime[0m
+Completed in 22ms (View: 1, DB: 1) | 200 OK [http://localhost/bookings/search]
+
+
+Processing BookingsController#search (for 127.0.0.1 at 2014-09-20 21:29:05) [POST]
+  Parameters: {"id"=>"1", "bookings"=>"{\"from\":1.2,\"to\":1.2,\"pickup_datetime\":\"2014-09-20 12:56:46\",\"seats_remaining\":5,\"vehicle_type\":2}", "no_ppl"=>"4"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mBooking Load (0.5ms)[0m   [0mSELECT `bookings`.* FROM `bookings` INNER JOIN `user_bookings` ON (`bookings`.`id` = `user_bookings`.`booking_id`) INNER JOIN `users` ON (`users`.`id` = `user_bookings`.`user_id`) WHERE (bookings.from = 1.2 AND bookings.to = 1.2 AND (pickup_datetime BETWEEN '2014-09-20 12:41:46' AND '2014-09-20 12:56:46') AND vehicle_type =2 AND users.gender = 'male' AND seats_remaining >= '4') ORDER BY pickup_datetime[0m
+Completed in 30ms (View: 1, DB: 1) | 200 OK [http://localhost/bookings/search]
+
+
+Processing BookingsController#search (for 127.0.0.1 at 2014-09-20 21:29:05) [POST]
+  Parameters: {"id"=>"1", "bookings"=>"{\"from\":1.2,\"to\":1.2,\"pickup_datetime\":\"2014-09-20 12:56:46\",\"seats_remaining\":5,\"vehicle_type\":2}", "no_ppl"=>"4"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mBooking Load (0.5ms)[0m   [0mSELECT `bookings`.* FROM `bookings` INNER JOIN `user_bookings` ON (`bookings`.`id` = `user_bookings`.`booking_id`) INNER JOIN `users` ON (`users`.`id` = `user_bookings`.`user_id`) WHERE (bookings.from = 1.2 AND bookings.to = 1.2 AND (pickup_datetime BETWEEN '2014-09-20 12:41:46' AND '2014-09-20 12:56:46') AND vehicle_type =2 AND users.gender = 'male' AND seats_remaining >= '4') ORDER BY pickup_datetime[0m
+Completed in 43ms (View: 0, DB: 1) | 200 OK [http://localhost/bookings/search]
+
+
+Processing BookingsController#search (for 127.0.0.1 at 2014-09-20 21:29:05) [POST]
+  Parameters: {"id"=>"1", "bookings"=>"{\"from\":1.2,\"to\":1.2,\"pickup_datetime\":\"2014-09-20 12:56:46\",\"seats_remaining\":5,\"vehicle_type\":2}", "no_ppl"=>"4"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mBooking Load (0.5ms)[0m   [0mSELECT `bookings`.* FROM `bookings` INNER JOIN `user_bookings` ON (`bookings`.`id` = `user_bookings`.`booking_id`) INNER JOIN `users` ON (`users`.`id` = `user_bookings`.`user_id`) WHERE (bookings.from = 1.2 AND bookings.to = 1.2 AND (pickup_datetime BETWEEN '2014-09-20 12:41:46' AND '2014-09-20 12:56:46') AND vehicle_type =2 AND users.gender = 'male' AND seats_remaining >= '4') ORDER BY pickup_datetime[0m
+Completed in 75ms (View: 0, DB: 1) | 200 OK [http://localhost/bookings/search]
+
+
+Processing BookingsController#search (for 127.0.0.1 at 2014-09-20 21:29:05) [POST]
+  Parameters: {"id"=>"1", "bookings"=>"{\"from\":1.2,\"to\":1.2,\"pickup_datetime\":\"2014-09-20 12:56:46\",\"seats_remaining\":5,\"vehicle_type\":2}", "no_ppl"=>"4"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mBooking Load (0.7ms)[0m   [0mSELECT `bookings`.* FROM `bookings` INNER JOIN `user_bookings` ON (`bookings`.`id` = `user_bookings`.`booking_id`) INNER JOIN `users` ON (`users`.`id` = `user_bookings`.`user_id`) WHERE (bookings.from = 1.2 AND bookings.to = 1.2 AND (pickup_datetime BETWEEN '2014-09-20 12:41:46' AND '2014-09-20 12:56:46') AND vehicle_type =2 AND users.gender = 'male' AND seats_remaining >= '4') ORDER BY pickup_datetime[0m
+Completed in 38ms (View: 0, DB: 1) | 200 OK [http://localhost/bookings/search]
+
+
+Processing BookingsController#new (for 127.0.0.1 at 2014-09-20 21:30:45) [POST]
+  Parameters: {"id"=>"1", "bookings"=>"{\"from\":1.2,\"to\":1.2,\"pickup_datetime\":\"2014-09-20 12:56:46\",\"seats_remaining\":5,\"vehicle_type\":2}", "no_ppl"=>"4"}
+
+ActionView::MissingTemplate (Missing template bookings/new.erb in view path /Users/srinivasan/letshare/letshare/app/views):
+  <internal:prelude>:10:in `synchronize'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BookingsController#create (for 127.0.0.1 at 2014-09-20 21:31:08) [POST]
+  Parameters: {"id"=>"1", "bookings"=>"{\"from\":1.2,\"to\":1.2,\"pickup_datetime\":\"2014-09-20 12:56:46\",\"seats_remaining\":5,\"vehicle_type\":2}", "no_ppl"=>"4"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.-):
+  app/controllers/bookings_controller.rb:12:in `create'
+  <internal:prelude>:10:in `synchronize'
+
+Rendered rescues/_trace (29.8ms)
+Rendered rescues/_request_and_response (2.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BookingsController#create (for 127.0.0.1 at 2014-09-20 21:31:57) [POST]
+  Parameters: {"id"=>"1", "bookings"=>"{\"from\":1.2,\"to\":1.2,\"pickup_datetime\":\"2014-09-20 12:56:46\",\"seats_remaining\":5,\"vehicle_type\":2}", "no_ppl"=>"4"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+
+TypeError (String can't be coerced into Fixnum):
+  app/controllers/bookings_controller.rb:12:in `-'
+  app/controllers/bookings_controller.rb:12:in `create'
+  <internal:prelude>:10:in `synchronize'
+
+Rendered rescues/_trace (24.0ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BookingsController#create (for 127.0.0.1 at 2014-09-20 21:33:43) [POST]
+  Parameters: {"id"=>"1", "bookings"=>"{\"from\":1.2,\"to\":1.2,\"pickup_datetime\":\"2014-09-20 12:56:46\",\"seats_remaining\":5,\"vehicle_type\":2}", "no_ppl"=>"4"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.-):
+  app/controllers/bookings_controller.rb:12:in `create'
+  <internal:prelude>:10:in `synchronize'
+
+Rendered rescues/_trace (23.9ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BookingsController#create (for 127.0.0.1 at 2014-09-20 21:34:41) [POST]
+  Parameters: {"id"=>"1", "bookings"=>"{\"from\":1.2,\"to\":1.2,\"pickup_datetime\":\"2014-09-20 12:56:46\",\"seats_remaining\":5,\"vehicle_type\":2}", "no_ppl"=>"4"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mBooking Create (0.4ms)[0m   [0;1mINSERT INTO `bookings` (`from`, `to`, `seats_remaining`, `pickup_datetime`, `created_at`, `updated_at`, `vehicle_type`) VALUES(1.2, 1.2, 4, '2014-09-20 12:56:46', '2014-09-20 16:04:41', '2014-09-20 16:04:41', 2)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUserBooking Create (0.3ms)[0m   [0mINSERT INTO `user_bookings` (`booking_id`, `user_id`, `no_ppl`, `created_at`, `updated_at`) VALUES(3, 1, 4, '2014-09-20 16:04:41', '2014-09-20 16:04:41')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Completed in 66ms (View: 0, DB: 2) | 200 OK [http://localhost/bookings/create]
+
+
+Processing BookingsController#create (for 127.0.0.1 at 2014-09-20 21:35:10) [POST]
+  Parameters: {"id"=>"1", "bookings"=>"{\"from\":1.2,\"to\":1.2,\"pickup_datetime\":\"2014-09-20 12:56:46\",\"seats_remaining\":5,\"vehicle_type\":2}", "no_ppl"=>"4"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.-):
+  app/controllers/bookings_controller.rb:13:in `create'
+  <internal:prelude>:10:in `synchronize'
+
+Rendered rescues/_trace (24.0ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BookingsController#create (for 127.0.0.1 at 2014-09-20 21:36:50) [POST]
+  Parameters: {"id"=>"1", "bookings"=>"{\"from\":1.2,\"to\":1.2,\"pickup_datetime\":\"2014-09-20 12:56:46\",\"seats_remaining\":5,\"vehicle_type\":2}", "no_ppl"=>"4"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mBooking Create (0.3ms)[0m   [0;1mINSERT INTO `bookings` (`from`, `to`, `seats_remaining`, `pickup_datetime`, `created_at`, `updated_at`, `vehicle_type`) VALUES(1.2, 1.2, 1, '2014-09-20 12:56:46', '2014-09-20 16:07:01', '2014-09-20 16:07:01', 2)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUserBooking Create (0.3ms)[0m   [0mINSERT INTO `user_bookings` (`booking_id`, `user_id`, `no_ppl`, `created_at`, `updated_at`) VALUES(4, 1, 4, '2014-09-20 16:07:01', '2014-09-20 16:07:01')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Completed in 11137ms (View: 0, DB: 2) | 200 OK [http://localhost/bookings/create]
+
+
+Processing BookingsController#create (for 127.0.0.1 at 2014-09-20 21:37:44) [POST]
+  Parameters: {"id"=>"1", "bookings"=>"{\"from\":1.2,\"to\":1.2,\"pickup_datetime\":\"2014-09-20 12:56:46\",\"seats_remaining\":5,\"vehicle_type\":2}", "no_ppl"=>"2"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mBooking Create (0.3ms)[0m   [0;1mINSERT INTO `bookings` (`from`, `to`, `seats_remaining`, `pickup_datetime`, `created_at`, `updated_at`, `vehicle_type`) VALUES(1.2, 1.2, 3, '2014-09-20 12:56:46', '2014-09-20 16:07:44', '2014-09-20 16:07:44', 2)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUserBooking Create (0.3ms)[0m   [0mINSERT INTO `user_bookings` (`booking_id`, `user_id`, `no_ppl`, `created_at`, `updated_at`) VALUES(5, 1, 2, '2014-09-20 16:07:44', '2014-09-20 16:07:44')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Completed in 63ms (View: 0, DB: 2) | 200 OK [http://localhost/bookings/create]
+
+
+Processing BookingsController#create (for 127.0.0.1 at 2014-09-20 21:38:57) [POST]
+  Parameters: {"id"=>"1", "bookings"=>"{\"from\":1.2,\"to\":1.2,\"pickup_datetime\":2014-09-20 12:56:46,\"vehicle_type\":3}", "no_ppl"=>"2"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+
+JSON::ParserError (746: unexpected token at '{"from":1.2,"to":1.2,"pickup_datetime":2014-09-20 12:56:46,"vehicle_type":3}'):
+  /Users/srinivasan/.rvm/rubies/ruby-1.9.3-p545/lib/ruby/1.9.1/json/common.rb:148:in `parse'
+  /Users/srinivasan/.rvm/rubies/ruby-1.9.3-p545/lib/ruby/1.9.1/json/common.rb:148:in `parse'
+  app/controllers/bookings_controller.rb:9:in `create'
+  <internal:prelude>:10:in `synchronize'
+
+Rendered rescues/_trace (30.2ms)
+Rendered rescues/_request_and_response (2.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BookingsController#search (for 127.0.0.1 at 2014-09-20 21:39:49) [POST]
+  Parameters: {"id"=>"1", "bookings"=>"{\"from\":1.2,\"to\":1.2,\"pickup_datetime\":'2014-09-20 12:56:46',\"seats_remaining\":5,\"vehicle_type\":\"abc\"}", "no_ppl"=>"4"}
+
+JSON::ParserError (746: unexpected token at '{"from":1.2,"to":1.2,"pickup_datetime":'2014-09-20 12:56:46',"seats_remaining":5,"vehicle_type":"abc"}'):
+  /Users/srinivasan/.rvm/rubies/ruby-1.9.3-p545/lib/ruby/1.9.1/json/common.rb:148:in `parse'
+  /Users/srinivasan/.rvm/rubies/ruby-1.9.3-p545/lib/ruby/1.9.1/json/common.rb:148:in `parse'
+  app/controllers/bookings_controller.rb:26:in `search'
+  <internal:prelude>:10:in `synchronize'
+
+Rendered rescues/_trace (25.5ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BookingsController#search (for 127.0.0.1 at 2014-09-20 21:40:26) [POST]
+  Parameters: {"id"=>"1", "bookings"=>"{\"from\":1.2,\"to\":1.2,\"pickup_datetime\":'2014-09-20 12:56:46',\"vehicle_type\":2}", "no_ppl"=>"4"}
+
+JSON::ParserError (746: unexpected token at '{"from":1.2,"to":1.2,"pickup_datetime":'2014-09-20 12:56:46',"vehicle_type":2}'):
+  /Users/srinivasan/.rvm/rubies/ruby-1.9.3-p545/lib/ruby/1.9.1/json/common.rb:148:in `parse'
+  /Users/srinivasan/.rvm/rubies/ruby-1.9.3-p545/lib/ruby/1.9.1/json/common.rb:148:in `parse'
+  app/controllers/bookings_controller.rb:26:in `search'
+  <internal:prelude>:10:in `synchronize'
+
+Rendered rescues/_trace (42.2ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BookingsController#search (for 127.0.0.1 at 2014-09-20 21:40:31) [POST]
+  Parameters: {"id"=>"1", "bookings"=>"{\"from\":1.2,\"to\":1.2,\"pickup_datetime\":'2014-09-20 12:56:46',\"vehicle_type\":2}", "no_ppl"=>"4"}
+
+JSON::ParserError (746: unexpected token at '{"from":1.2,"to":1.2,"pickup_datetime":'2014-09-20 12:56:46',"vehicle_type":2}'):
+  /Users/srinivasan/.rvm/rubies/ruby-1.9.3-p545/lib/ruby/1.9.1/json/common.rb:148:in `parse'
+  /Users/srinivasan/.rvm/rubies/ruby-1.9.3-p545/lib/ruby/1.9.1/json/common.rb:148:in `parse'
+  app/controllers/bookings_controller.rb:26:in `search'
+  <internal:prelude>:10:in `synchronize'
+
+Rendered rescues/_trace (24.5ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BookingsController#create (for 127.0.0.1 at 2014-09-20 21:41:08) [POST]
+  Parameters: {"id"=>"1", "bookings"=>"{\"from\":1.2,\"to\":1.2,\"pickup_datetime\":\"2014-09-20 12:56:46\",\"seats_remaining\":5,\"vehicle_type\":2}", "no_ppl"=>"2"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mBooking Create (0.4ms)[0m   [0;1mINSERT INTO `bookings` (`from`, `to`, `seats_remaining`, `pickup_datetime`, `created_at`, `updated_at`, `vehicle_type`) VALUES(1.2, 1.2, 3, '2014-09-20 12:56:46', '2014-09-20 16:11:08', '2014-09-20 16:11:08', 2)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUserBooking Create (0.4ms)[0m   [0mINSERT INTO `user_bookings` (`booking_id`, `user_id`, `no_ppl`, `created_at`, `updated_at`) VALUES(6, 1, 2, '2014-09-20 16:11:08', '2014-09-20 16:11:08')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Completed in 109ms (View: 1, DB: 2) | 200 OK [http://localhost/bookings/create]
+
+
+Processing BookingsController#create (for 127.0.0.1 at 2014-09-20 21:41:52) [POST]
+  Parameters: {"id"=>"1", "bookings"=>"{\"from\":1.2,\"to\":1.2,\"pickup_datetime\":\"2014-09-20 12:56:46\",\"vehicle_type\":3}", "no_ppl"=>"2"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mBooking Create (0.4ms)[0m   [0mINSERT INTO `bookings` (`from`, `to`, `seats_remaining`, `pickup_datetime`, `created_at`, `updated_at`, `vehicle_type`) VALUES(1.2, 1.2, 5, '2014-09-20 12:56:46', '2014-09-20 16:11:52', '2014-09-20 16:11:52', 3)[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUserBooking Create (0.4ms)[0m   [0;1mINSERT INTO `user_bookings` (`booking_id`, `user_id`, `no_ppl`, `created_at`, `updated_at`) VALUES(7, 1, 2, '2014-09-20 16:11:52', '2014-09-20 16:11:52')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Completed in 90ms (View: 1, DB: 3) | 200 OK [http://localhost/bookings/create]
+
+
+Processing BookingsController#join_ride (for 127.0.0.1 at 2014-09-20 21:43:04) [POST]
+  Parameters: {"id"=>"2", "bookings"=>"{\"id\":7,\"from\":1.2,\"to\":1.2,\"pickup_datetime\":\"2014-09-20 12:56:46\",\"vehicle_type\":3}", "no_ppl"=>"3"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  (eval):1:in `params'
+  app/controllers/bookings_controller.rb:50:in `join_ride'
+  <internal:prelude>:10:in `synchronize'
+
+Rendered rescues/_trace (32.6ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BookingsController#join_ride (for 127.0.0.1 at 2014-09-20 21:44:10) [POST]
+  Parameters: {"id"=>"2", "bookings"=>"{\"id\":7,\"from\":1.2,\"to\":1.2,\"pickup_datetime\":\"2014-09-20 12:56:46\",\"vehicle_type\":3}", "no_ppl"=>"3"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+
+TypeError (can't convert nil into String):
+  /Users/srinivasan/.rvm/rubies/ruby-1.9.3-p545/lib/ruby/1.9.1/json/common.rb:148:in `initialize'
+  /Users/srinivasan/.rvm/rubies/ruby-1.9.3-p545/lib/ruby/1.9.1/json/common.rb:148:in `new'
+  /Users/srinivasan/.rvm/rubies/ruby-1.9.3-p545/lib/ruby/1.9.1/json/common.rb:148:in `parse'
+  app/controllers/bookings_controller.rb:51:in `join_ride'
+  <internal:prelude>:10:in `synchronize'
+
+Rendered rescues/_trace (26.0ms)
+Rendered rescues/_request_and_response (1.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BookingsController#join_ride (for 127.0.0.1 at 2014-09-20 21:44:50) [POST]
+  Parameters: {"id"=>"2", "bookings"=>"{\"id\":7,\"from\":1.2,\"to\":1.2,\"pickup_datetime\":\"2014-09-20 12:56:46\",\"vehicle_type\":3}", "no_ppl"=>"3"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Booking without an ID):
+  app/controllers/bookings_controller.rb:53:in `join_ride'
+  <internal:prelude>:10:in `synchronize'
+
+Rendered rescues/_trace (30.7ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (not_found)
+
+
+Processing BookingsController#join_ride (for 127.0.0.1 at 2014-09-20 21:45:40) [POST]
+  Parameters: {"id"=>"2", "bookings"=>"{\"id\":7,\"from\":1.2,\"to\":1.2,\"pickup_datetime\":\"2014-09-20 12:56:46\",\"vehicle_type\":3}", "no_ppl"=>"3"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mBooking Load (0.3ms)[0m   [0mSELECT * FROM `bookings` WHERE (`bookings`.`id` = 7) [0m
+
+TypeError (String can't be coerced into Fixnum):
+  app/controllers/bookings_controller.rb:56:in `-'
+  app/controllers/bookings_controller.rb:56:in `join_ride'
+  <internal:prelude>:10:in `synchronize'
+
+Rendered rescues/_trace (28.0ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BookingsController#join_ride (for 127.0.0.1 at 2014-09-20 21:46:03) [POST]
+  Parameters: {"id"=>"2", "bookings"=>"{\"id\":7,\"from\":1.2,\"to\":1.2,\"pickup_datetime\":\"2014-09-20 12:56:46\",\"vehicle_type\":3}", "no_ppl"=>"3"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mBooking Load (0.3ms)[0m   [0mSELECT * FROM `bookings` WHERE (`bookings`.`id` = 7) [0m
+
+NoMethodError (Attempt to call private method):
+  app/controllers/bookings_controller.rb:57:in `join_ride'
+  <internal:prelude>:10:in `synchronize'
+
+Rendered rescues/_trace (25.2ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BookingsController#join_ride (for 127.0.0.1 at 2014-09-20 21:47:47) [POST]
+  Parameters: {"id"=>"2", "bookings"=>"{\"id\":7,\"from\":1.2,\"to\":1.2,\"pickup_datetime\":\"2014-09-20 12:56:46\",\"vehicle_type\":3}", "no_ppl"=>"3"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mBooking Load (0.2ms)[0m   [0mSELECT * FROM `bookings` WHERE (`bookings`.`id` = 7) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mBooking Update (0.3ms)[0m   [0mUPDATE `bookings` SET `seats_remaining` = 2, `updated_at` = '2014-09-20 16:17:47' WHERE `id` = 7[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Completed in 78ms (View: 0, DB: 1) | 200 OK [http://localhost/bookings/join_ride]
